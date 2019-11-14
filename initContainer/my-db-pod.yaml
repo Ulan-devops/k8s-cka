@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: db-app
   labels:
-    app: app-db
+    app: db-app
     tier: backend
 spec:
   containers:
