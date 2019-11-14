@@ -19,4 +19,4 @@ spec:
         - sleep
         - "1000"
         image: busybox
-        name: my-busybox
+        name: app2-container
