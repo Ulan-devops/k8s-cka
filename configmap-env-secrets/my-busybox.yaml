@@ -25,4 +25,16 @@ spec:
             value: Talant
           - name: LAST_NAME
             value: Karmyshakov
+          - name: ADDRESS
+            valueFrom:
+              configMapRefKey:
+                name: my-info
+                key: address
+          - name: SALARY
+            valueFrom:
+              configMapRefKey:
+                name: my-info
+                key: salary
+
+     
   
