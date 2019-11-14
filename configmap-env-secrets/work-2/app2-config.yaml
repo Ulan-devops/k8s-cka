@@ -1,0 +1,19 @@
+apiVersion: v1
+data:
+  config-file: "#! /bin/sh\n# Reload the OpenSSH server when an interface comes up,
+    to allow it to start\n# listening on new addresses.\n\nset -e\n\n# Don't bother
+    to restart sshd when lo is configured.\nif [ \"$IFACE\" = lo ]; then\n\texit 0\nfi\n\n#
+    Only run from ifup.\nif [ \"$MODE\" != start ]; then\n\texit 0\nfi\n\n# OpenSSH
+    only cares about inet and inet6. Get ye gone, strange people\n# still using ipx.\nif
+    [ \"$ADDRFAM\" != inet ] && [ \"$ADDRFAM\" != inet6 ]; then\n\texit 0\nfi\n\n#
+    Is /usr mounted?\nif [ ! -e /usr/sbin/sshd ]; then\n\texit 0\nfi\n\nif [ ! -f
+    /run/sshd.pid ] || \\\n   [ \"$(ps -p \"$(cat /run/sshd.pid)\" -o comm=)\" !=
+    sshd ]; then\n\texit 0\nfi\n\n# We'd like to use 'reload' here, but it has some
+    problems; see #502444.  On\n# the other hand, repeated restarts of ssh make systemd
+    unhappy\n# (#756547/#757822), so use reload in that case.\nif [ -d /run/systemd/system
+    ]; then\n\tsystemctl reload --no-block ssh.service >/dev/null 2>&1 || true\nelse\n\tinvoke-rc.d
+    ssh restart >/dev/null 2>&1 || true\nfi\n\nexit 0\n"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: app2-config
