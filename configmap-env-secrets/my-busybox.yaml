@@ -27,12 +27,12 @@ spec:
             value: Karmyshakov
           - name: ADDRESS
             valueFrom:
-              configMapRefKey:
+              configMapKeyRef:
                 name: my-info
                 key: address
           - name: SALARY
             valueFrom:
-              configMapRefKey:
+              configMapKeyRef:
                 name: my-info
                 key: salary
 
