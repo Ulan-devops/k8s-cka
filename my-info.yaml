@@ -1,8 +1,7 @@
 apiVersion: v1
 data:
   address: 1409 Hawthorne
-  salary: "00"
+  salary: "$100"
 kind: ConfigMap
 metadata:
-  creationTimestamp: null
   name: my-info
