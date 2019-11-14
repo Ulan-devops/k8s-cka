@@ -35,6 +35,9 @@ spec:
               configMapKeyRef:
                 name: my-info
                 key: salary
-
+        envFrom:
+          - configMapKeyRef:
+              name: DATA1
+              key: test-file
      
   
