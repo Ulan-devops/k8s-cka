@@ -22,7 +22,7 @@ spec:
         name: app2-container
         volumeMounts:
           - name: config-volume
-            path: /etc/
+            mountPath: /etc/network/
 
       volumes:
         - name: config-volume
