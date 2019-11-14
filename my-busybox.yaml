@@ -21,4 +21,8 @@ spec:
         image: busybox
         name: my-busybox
         env:
-          name: TALANT
+          - name: FIRST_NAME
+            value: Talant
+          - name: LAST_NAME
+            value: Karmyshakov
+  
