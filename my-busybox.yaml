@@ -20,3 +20,5 @@ spec:
         - "1000"
         image: busybox
         name: my-busybox
+        env:
+          name: TALANT
