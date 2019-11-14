@@ -20,3 +20,14 @@ spec:
         - "1000"
         image: busybox
         name: app2-container
+        volumeMounts:
+          - name: config-volume
+            path: /etc/network/
+
+      volumes:
+        - name: config-volume
+          configMap:
+            name: app2-config
+            items:
+              - key: config-file
+                path: config-file
