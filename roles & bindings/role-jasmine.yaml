@@ -1,9 +1,9 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  namespace: qa
+  namespace: dev
   name: dev-read-only
 rules:
 - apiGroups: ["","apps"] 
   resources: ["deployments","replicasets","pods"]
-  verbs: ["get", "watch", "list"]
+  verbs: ["create","update",""get", "watch", "list"]
