@@ -6,4 +6,4 @@ metadata:
 rules:
 - apiGroups: ["","apps"] 
   resources: ["deployments","replicasets","pods"]
-  verbs: ["create","update",","get", "watch", "list"]
+  verbs: ["create","update","get", "watch", "list"]
