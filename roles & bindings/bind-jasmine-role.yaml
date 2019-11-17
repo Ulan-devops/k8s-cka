@@ -4,8 +4,8 @@ metadata:
   name: bind-dev-read-only
   namespace: dev
 subjects:
-- kind: User
-  name: talant
+- kind: Group
+  name: dev
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role 
