@@ -1,0 +1,8 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: admins-group-role
+rules:
+- apiGroups: ["","apps"] 
+  resources: ["deployments","replicasets","pods","secrets","configmaps"]
+  verbs: ["create","update","get", "watch", "list"]
