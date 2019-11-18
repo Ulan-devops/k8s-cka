@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   namespace: web
-  name: dev-read-only
+  name: web-read-only
 rules:
 - apiGroups: ["","apps"] 
   resources: ["deployments","replicasets","pods"]

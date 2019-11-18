@@ -9,5 +9,5 @@ subjects:
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role 
-  name: dev-read-only 
+  name: web-read-only 
   apiGroup: rbac.authorization.k8s.io
