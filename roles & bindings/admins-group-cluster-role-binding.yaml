@@ -8,5 +8,5 @@ subjects:
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole 
-  name: admins-group-role 
+  name: admins-group-cluster-role 
   apiGroup: rbac.authorization.k8s.io
