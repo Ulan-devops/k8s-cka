@@ -10,4 +10,4 @@ spec:
       name: private-container
 
   imagePullSecrets:
-    - name: docker-reg
+    - name: docker-cred
