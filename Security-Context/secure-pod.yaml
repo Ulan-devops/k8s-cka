@@ -13,4 +13,4 @@ spec:
     image: alpine
     name: secure-pod
     securityContext:
-      runAsUser: 1000
+      runAsUser: 405
