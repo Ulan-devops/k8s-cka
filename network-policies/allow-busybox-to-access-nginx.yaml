@@ -11,3 +11,5 @@ spec:
     - podSelector:
         matchLabels:
           run: busybox
+    ports:
+    - port: 80
