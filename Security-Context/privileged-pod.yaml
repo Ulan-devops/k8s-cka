@@ -15,4 +15,4 @@ spec:
     securityContext:
       privileged: true
       capabilities:
-        drop: ["SYS_TIME"]
+        drop: ["SYS_DATE"]
