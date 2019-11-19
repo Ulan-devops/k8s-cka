@@ -21,5 +21,9 @@ spec:
   - name: alpine
     image: alpine
     command: ["sh","-c","sleep 1h"]
+    volumeMounts:
+    - name: sec-ctx-vol
+      mountPath: /data/demo
+      
 
-    
+
