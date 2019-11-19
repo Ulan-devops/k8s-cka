@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: app1
+  name: app1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: app1
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        run: app1
+        tier: frontend
+    spec:
+      containers:
+      - image: ktalant/kuard:1
+        name: app1
+      imagePullSecrets:
+      - name: my-cred
