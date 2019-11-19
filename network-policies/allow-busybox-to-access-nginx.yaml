@@ -1,14 +1,14 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: nginx-allows-busybox-to-access
+  name: app1-allows-toolpod-to-access
 spec:
   podSelector:
     matchLabels:
-      tier: backend
+      tier: frontend
   ingress:
   - from:
     - podSelector:
         matchLabels:
-          tier: frontend
+          tier: tool
     
