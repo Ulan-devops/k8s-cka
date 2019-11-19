@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io
+kind: NetworkPolicy
+metadata:
+  name: nginx-allows-busybox-to-access
+spec:
+  podSelector:
+    matchLabels:
+      run: nginx
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          run: busybox
