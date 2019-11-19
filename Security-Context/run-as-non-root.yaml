@@ -13,4 +13,5 @@ spec:
     image: busybox
     name: secure-pod
     securityContext:
+      runAsUser: 405
       runAsNonRoot: True
