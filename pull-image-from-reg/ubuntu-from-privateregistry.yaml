@@ -10,4 +10,4 @@ spec:
       name: private-container
 
   imagePullSecrets:
-    - name: regcred
+    - name: talant-docker-regcred
