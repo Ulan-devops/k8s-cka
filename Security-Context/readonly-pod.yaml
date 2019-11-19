@@ -13,4 +13,4 @@ spec:
     image: alpine
     name: privileged-pod
     securityContext:
-      readOnlyRootFileSystem: true
+      readOnlyRootFilesystem: true
