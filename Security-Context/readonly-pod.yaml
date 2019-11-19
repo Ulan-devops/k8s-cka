@@ -3,14 +3,14 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: privileged-pod
-  name: privileged-pod
+    run: readonly-pod
+  name: readonly-pod
 spec:
   containers:
   - args:
     - sleep
     - "999999"
     image: alpine
-    name: privileged-pod
+    name: readonly-pod
     securityContext:
       readOnlyRootFilesystem: true
