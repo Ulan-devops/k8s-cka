@@ -5,11 +5,11 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      run: nginx
+      tier: backend
   ingress:
   - from:
     - podSelector:
         matchLabels:
-          run: busybox
+          tier: frontend
     ports:
     - port: 80
