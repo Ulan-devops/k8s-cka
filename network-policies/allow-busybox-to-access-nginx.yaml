@@ -11,5 +11,4 @@ spec:
     - podSelector:
         matchLabels:
           tier: frontend
-    ports:
-    - port: 80
+    
