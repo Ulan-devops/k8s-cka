@@ -13,4 +13,4 @@ spec:
     name: remove-capabilities-pod
     securityContext:
       capabilities:
-        drop: ["SYS_TIME","CHOWN","LS"]
+        drop: ["SYS_TIME","CHOWN"]
