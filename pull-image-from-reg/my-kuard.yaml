@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: ubuntu-sleeper
+  name: kuard-pod
   labels:
-    app: ubuntu
+    app: kuard
 spec:
   containers:
-    - image: ktalant/ubuntu-sleep:v1
+    - image: ktalant/kuard:1
       name: private-container
 
   imagePullSecrets:
-    - name: talant-docker-regcred
+    - name: docker-reg
