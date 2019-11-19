@@ -6,7 +6,7 @@ metadata:
     app: ubuntu
 spec:
   containers:
-    - image: ktalant/ubuntu-sleeper:v1
+    - image: ktalant/ubuntu-sleep:v1
       name: private-container
 
   imagePullSecrets:
