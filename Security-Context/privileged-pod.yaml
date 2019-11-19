@@ -14,3 +14,5 @@ spec:
     name: privileged-pod
     securityContext:
       privileged: true
+      capabilities:
+        drop: ["SYS_TIME"]
