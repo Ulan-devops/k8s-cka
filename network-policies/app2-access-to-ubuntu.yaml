@@ -8,7 +8,7 @@ spec:
       tier: backend
   ingress:
   - from:
-    - podSelector:
-        matchLabels:
-          run: ubuntu
+    port:
+    
+
     

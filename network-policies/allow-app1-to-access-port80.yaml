@@ -8,7 +8,6 @@ spec:
       tier: frontend
   ingress:
   - from:
-    - podSelector:
-        matchLabels:
-          tier: tool
-    
+    ports:
+    - protocol: TCP
+      port: 80
